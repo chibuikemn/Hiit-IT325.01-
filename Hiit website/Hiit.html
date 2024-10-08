@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIIT/Tabata Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HIIT/Tabata Workout Timer</h1>
+    </header>
+    
+    <main>
+        <!-- Timer Display -->
+        <section id="timer-display">
+            <h2>Current Interval: <span id="current-interval">Work</span></h2>
+            <h1 id="timer" class="work-timer">30:00</h1>
+        </section>
+
+        <!-- Workout Settings -->
+        <section id="settings">
+            <h3>Workout Settings</h3>
+            <form id="workout-form">
+                <label for="work-time">Work Time (seconds): </label>
+                <input type="number" id="work-time" min="10" max="60" value="30">
+
+                <label for="rest-time">Rest Time (seconds): </label>
+                <input type="number" id="rest-time" min="5" max="30" value="10">
+
+                <label for="sets">Sets: </label>
+                <input type="number" id="sets" min="1" max="10" value="5">
+
+                <label for="cycles">Cycles: </label>
+                <input type="number" id="cycles" min="1" max="5" value="3">
+
+                <label for="total-time">Total Workout Time: </label>
+                <input type="text" id="total-time" disabled>
+
+                <button type="button" id="start-button">Start Workout</button>
+                <button type="button" id="stop-button">Stop</button>
+            </form>
+        </section>
+    </main>
+
+    <audio id="beep-sound" src="beep.mp3"></audio>
+
+    <footer>
+        <p>&copy; 2024 HIIT Timer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
